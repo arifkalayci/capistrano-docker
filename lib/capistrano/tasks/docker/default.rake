@@ -58,7 +58,7 @@ namespace :docker do
 
       task :tag do
         on roles(fetch(:docker_role)) do
-          execute :docker, "tag -f #{fetch(:docker_image_full)} #{fetch(:docker_image)}:latest"
+          execute :docker, "tag #{fetch(:docker_image_full)} #{fetch(:docker_image)}:latest"
         end
       end
     end
